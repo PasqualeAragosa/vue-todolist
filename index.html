@@ -40,8 +40,9 @@
                 </h2>
                 <div class="task_list">
                     <ul v-if="tasks.length > 0">
-                        <li v-for="(task, index) in tasks">
+                        <li v-for="(task, index) in tasks" @click="underlineTask(task)" :class=" task.done === true ? 'underline' : '' " class="">
                             {{task}}
+                            <i class="fa-solid fa-circle-xmark" @click="removeTask(index)"></i>
                         </li>
                     </ul>
                 </div>

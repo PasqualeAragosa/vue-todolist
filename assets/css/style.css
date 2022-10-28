@@ -9,10 +9,6 @@ img {
     max-width: 100%;
 }
 
-li {
-    list-style: none;
-}
-
 small {
     padding: 0.5rem;
 }
@@ -27,6 +23,10 @@ button {
     cursor: pointer;
 }
 
+i {
+    cursor: pointer;
+}
+
 /* #endregion Common */
 
 /* #region Body */
@@ -34,7 +34,14 @@ button {
     color: blue;
 }
 
+.menu li {
+    list-style: none;
+}
 
+.underline {
+    text-decoration: line-through;
+    color: red;
+}
 
 /* #endregion Body */
 

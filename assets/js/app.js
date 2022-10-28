@@ -33,7 +33,22 @@ createApp({
     methods: {
         addTask() {
             this.tasks.unshift(this.newTask.text);
-            this.newTask.text = '';
+            this.newTask = {
+                text: null,
+                done: false
+            };
+        },
+        removeTask(index) {
+            this.tasks.splice(index, 1);
+        },
+        underlineTask(task) {
+            if (task.done === true) {
+                console.log('Sono qui 1');
+                task.done = false;
+            } else {
+                task.done = true;
+                console.log('Sono qui 2');
+            }
         }
     }
 }).mount('#app'); 
