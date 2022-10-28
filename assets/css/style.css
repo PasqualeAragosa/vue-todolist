@@ -9,9 +9,22 @@ img {
     max-width: 100%;
 }
 
+li {
+    list-style: none;
+}
+
+small {
+    padding: 0.5rem;
+}
+
 /* #endregion Common */
 
 /* #region Body */
+ul li:first-child {
+    color: blue;
+}
+
+
 
 /* #endregion Body */
 
