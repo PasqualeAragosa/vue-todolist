@@ -23,13 +23,17 @@ const { createApp } = Vue;
 createApp({
     data() {
         return {
-            task: {
-                text: '',
+            tasks: [],
+            newTask: {
+                text: null,
                 done: false
             }
         }
     },
-    methods() {
-        
+    methods: {
+        addTask() {
+            this.tasks.unshift(this.newTask.text);
+            this.newTask.text = '';
+        }
     }
 }).mount('#app'); 
